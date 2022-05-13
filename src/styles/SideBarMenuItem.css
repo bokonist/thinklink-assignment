@@ -1,0 +1,7 @@
+.menu-item-icon {
+	height: 1rem;
+	width: 1rem;
+}
+.active-tab {
+	background-color: blue;
+}
