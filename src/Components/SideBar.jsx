@@ -1,16 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SideBarMenuItem from './SideBarMenuItem';
-import placeholderIcon from '../logo.svg';
+import ordersIcon from '../assets/ordersLogo.svg';
+import dashboardIcon from '../assets/dashboardLogo.svg';
+import inventoryIcon from '../assets/inventoryLogo.svg';
+import customersIcon from '../assets/customersLogo.svg';
+import reportsIcon from '../assets/reportsLogo.svg';
+import settingsIcon from '../assets/settingsLogo.svg';
 
 function SideBar({ handleTabChange }) {
   const sideBarMenu = [
-    { id: 1, name: 'Dashboard', icon: placeholderIcon },
-    { id: 2, name: 'Inventory', icon: placeholderIcon },
-    { id: 3, name: 'Orders', icon: placeholderIcon },
-    { id: 4, name: 'Customers', icon: placeholderIcon },
-    { id: 5, name: 'Reports', icon: placeholderIcon },
-    { id: 6, name: 'Settings', icon: placeholderIcon },
+    { id: 1, name: 'Dashboard', icon: dashboardIcon },
+    { id: 2, name: 'Inventory', icon: inventoryIcon },
+    { id: 3, name: 'Orders', icon: ordersIcon },
+    { id: 4, name: 'Customers', icon: customersIcon },
+    { id: 5, name: 'Reports', icon: reportsIcon },
+    { id: 6, name: 'Settings', icon: settingsIcon },
   ];
   return (
     <div className="sideBarContainer">
