@@ -1,16 +1,23 @@
 import React from 'react';
-import navbarLogo from '../assets/navbarLogo.png';
-import notificationBell from '../assets/notificationBell.png';
+import navbarLogo from '../assets/navBarLogo.svg';
+import notificationBell from '../assets/notificationBell.svg';
+import avatar from '../assets/avatar.png';
+import dropdown from '../assets/dropdown.svg';
 import '../styles/NavBar.css';
 
 function NavBar() {
   return (
     <div className="navbar-container">
-      <img src={navbarLogo} alt="CORKOWL logo" className="navbar-logo" />
-      <input type="text" placeholder="Search wines, customers here..." />
-      <img src={notificationBell} alt="notifications" className="navbar-notification" />
-      <span>Jay Pillai</span>
-      <img src={notificationBell} alt="profile" className="navbar-profile" />
+      <img className="navbar-logo" src={navbarLogo} alt="CORKOWL logo" />
+      <input className="navbar-search" type="text" placeholder="Search wines, customers here..." />
+      <div className="navbar-profile-container">
+        <img className="navbar-notification" src={notificationBell} alt="notifications" />
+        <span className="navbar-profile-name">Jay Pillai</span>
+        <img className="navbar-avatar" src={avatar} alt="profile" />
+        <div onClick={() => {}} onKeyDown={() => {}} tabIndex={0} role="button">
+          <img className="navbar-dropdown" src={dropdown} alt="dropdown menu" />
+        </div>
+      </div>
     </div>
   );
 }
