@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import '../styles/Content.css';
+import TabSelection from '../Contexts/TabSelection';
+import Dashboard from './Dashboard';
 
 function Content() {
+  const selectedTab = useContext(TabSelection);
   return (
-    <div>Content</div>
+    <div className="content-container">
+      {
+        (selectedTab === 'Dashboard') && <Dashboard />
+      }
+      {
+        (selectedTab !== 'Dashboard') && <span>{`${selectedTab} PLACEHOLDER -  to be implemented`}</span>
+      }
+    </div>
   );
 }
 
