@@ -65,7 +65,7 @@ function ChartView() {
         </div>
         <div className="general-info-container">
           <h1 className="info-title">Total Profit</h1>
-          <p className="net-info-container">$12,545.00</p>
+          <p className="net-info">$12,545.00</p>
           <div className="insight-container">
             <img src={chartRise} alt="insights icon" className="insight-icon" />
             <p className="insight-info">+23% from last week</p>
