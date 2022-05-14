@@ -5,5 +5,7 @@ function Footer() {
     <div>Footer</div>
   );
 }
-
-export default React.memo(Footer);
+function shouldNotRerender() {
+  return true;
+}
+export default React.memo(Footer, shouldNotRerender);
