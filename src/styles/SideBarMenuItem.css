@@ -24,4 +24,5 @@
 }
 .active-tab {
   background-color: #f7f1f3;
+  border-right: 3px solid #811434;
 }
