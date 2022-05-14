@@ -7,6 +7,7 @@ import inventoryIcon from '../assets/inventoryLogo.svg';
 import customersIcon from '../assets/customersLogo.svg';
 import reportsIcon from '../assets/reportsLogo.svg';
 import settingsIcon from '../assets/settingsLogo.svg';
+import Footer from './Footer';
 
 function SideBar({ handleTabChange }) {
   const sideBarMenu = [
@@ -23,6 +24,7 @@ function SideBar({ handleTabChange }) {
           // eslint-disable-next-line max-len
           sideBarMenu.map((item) => <SideBarMenuItem key={item.id} handleTabChange={handleTabChange} dataName={item.name} dataIcon={item.icon} />)
       }
+      <Footer />
     </div>
   );
 }
