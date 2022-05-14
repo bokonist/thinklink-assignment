@@ -1,0 +1,45 @@
+.chart-view-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  font-family: 'Open Sans', sans-serif;
+}
+.chart-view-header-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.header-overview-container {
+  display: flex;
+  flex-direction: column;
+}
+.refresh-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.filter-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.chart-view-body-container {
+  width: 100%;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.graph-container {
+  height: 20rem;
+}
+.general-info-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
