@@ -8,19 +8,18 @@
   background-color: #811434;
   padding-left: 2rem;
   padding-right: 2rem;
-  height: 3.5rem;
+  height: 4.5rem;
   border-radius: 0px;
 }
 
 .navbar-logo {
-  height: 19.999967575073242px;
-  width: 134.748291015625px;
+  height: 1.8rem;
   position: absolute;
 }
 .navbar-search {
   position: absolute;
-  left: 25rem;
-  height: 32px;
+  left: 32rem;
+  height: 2.5rem;
   width: 20%;
   min-width: 25rem;
   border-radius: 4px;
@@ -33,43 +32,41 @@
 }
 .navbar-profile-container {
   position: absolute;
-  right: 0;
+  right: 1.5rem;
   display: flex;
   flex-direction: row;
-  width: 15rem;
   justify-content: space-evenly;
+  justify-items: center;
   align-items: center;
 }
 .navbar-avatar {
-  height: 32px;
-  width: 32px;
-  left: 0px;
-  top: 0px;
+  height: 3rem;
+  width: 3rem;
+  margin: 0 0.5rem 0 0.5rem;
 }
 .navbar-dropdown {
-  height: 20px;
-  width: 20px;
+  height: 30px;
+  width: 30px;
   left: 140px;
   top: 6px;
   border-radius: 0px;
 }
 .navbar-profile-name {
-  height: 24px;
-  width: 90px;
-  left: 0px;
-  top: 4px;
-
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: white;
+
+  margin: 0 0.5rem 0 0.5rem;
 }
 .navbar-notification {
-  height: 24px;
-  width: 24px;
+  height: 2rem;
+  width: 2rem;
   top: 16px;
   margin-right: 2rem;
   border-radius: 0px;
+
+  margin: 0 3rem 0 0.5rem;
 }
 .navbar-notification:hover,
 .navbar-dropdown:hover,
