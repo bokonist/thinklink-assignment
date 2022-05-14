@@ -4,6 +4,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   background-color: #811434;
   padding-left: 2rem;
   padding-right: 2rem;
@@ -14,21 +15,25 @@
 .navbar-logo {
   height: 19.999967575073242px;
   width: 134.748291015625px;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  position: absolute;
 }
 .navbar-search {
+  position: absolute;
+  left: 25rem;
   height: 32px;
-  width: 354px;
+  width: 20%;
+  min-width: 25rem;
   border-radius: 4px;
   border: 0px;
   padding-left: 1rem;
   padding-right: 1rem;
-  margin-right: 47rem;
+  margin-left: -10rem;
   font-family: 'Open Sans', sans-serif;
   font-size: 1.1rem;
 }
 .navbar-profile-container {
+  position: absolute;
+  right: 0;
   display: flex;
   flex-direction: row;
   width: 15rem;
