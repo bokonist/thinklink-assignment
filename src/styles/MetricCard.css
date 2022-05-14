@@ -1,0 +1,92 @@
+.metrics-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 7rem;
+  width: 96%;
+  align-self: center;
+}
+.metric-card-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 4px;
+
+  height: 90%;
+  width: 25%;
+  margin: 2rem;
+}
+@keyframes cardSink {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.98);
+  }
+}
+
+.metric-card-container:hover {
+  border: solid #6464645b;
+  border-width: 0 2px;
+  cursor: pointer;
+  animation: cardSink 100ms ease-in 0ms 1 normal forwards;
+}
+.metric-card-container:first-of-type {
+  margin-left: 0;
+}
+.metric-card-container:nth-of-type(1) {
+  box-shadow: 0 -2px 0 #ffaa2c, 0 2px 11px rgba(0, 0, 0, 0.06);
+}
+.metric-card-container:nth-of-type(2) {
+  box-shadow: 0 -2px 0 #2c67ff, 0 2px 11px rgba(242, 242, 242, 0.5);
+}
+.metric-card-container:nth-of-type(3) {
+  box-shadow: 0 -2px 0 #00cf3a, 0 2px 11px rgba(242, 242, 242, 0.5);
+}
+.metric-card-container:nth-of-type(4) {
+  box-shadow: 0 -2px 0 #ff1c1c, 0 2px 11px rgba(242, 242, 242, 0.5);
+}
+.metric-card-container:last-of-type {
+  margin-right: 0;
+}
+
+.metric-card-info-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 50%;
+  width: 100%;
+}
+.metric-card-info-name {
+  padding-left: 1rem;
+  font-family: 'Open Sans';
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  color: #8c8ca1;
+}
+.metric-card-info-icon {
+  height: 2rem;
+  padding-right: 2rem;
+}
+.metric-card-value {
+  height: 50%;
+  width: 100%;
+
+  padding-left: 2rem;
+  color: black;
+  font-family: 'Open Sans';
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: left;
+}
