@@ -5,9 +5,15 @@ import TabSelection from '../Contexts/TabSelection';
 
 function SideBarMenuItem({ handleTabChange, dataName, dataIcon }) {
   const selectedTab = useContext(TabSelection);
-  const isSelected = (dataName === selectedTab);
+  const isSelected = dataName === selectedTab;
   return (
-    <div className={`menu-item ${isSelected && 'active-tab'}`} role="button" tabIndex={0} onClick={() => handleTabChange(dataName)} onKeyDown={() => handleTabChange(dataName)}>
+    <div
+      className={`menu-item ${isSelected && 'active-tab'}`}
+      role="button"
+      tabIndex={0}
+      onClick={() => handleTabChange(dataName)}
+      onKeyDown={() => {}}
+    >
       <img className="menu-item-icon" src={dataIcon} alt={`${dataName} icon`} />
       <span className="menu-item-name">{dataName}</span>
       <br />
