@@ -2,6 +2,8 @@ import React from 'react';
 import '../styles/Dashboard.css';
 import addButtonIcon from '../assets/addNewWineButton.svg';
 import Metrics from './Metrics';
+import ChartView from './ChartView';
+import InventoryTable from './InventoryTable';
 
 function Dashboard() {
   return (
@@ -19,7 +21,11 @@ function Dashboard() {
       <Metrics />
       <br />
       <h2 className="sub-heading">Sales detail</h2>
+      <br />
+      <ChartView />
       <h2 className="sub-heading">Inventory</h2>
+      <br />
+      <InventoryTable />
     </div>
   );
 }
