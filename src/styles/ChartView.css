@@ -1,10 +1,13 @@
 .chart-view-container {
   align-self: center;
   width: 95%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
 
   font-family: 'Open Sans', sans-serif;
+  border: 1px solid #fff2ee;
+  padding: 1.5rem;
 }
 .chart-view-header-container {
   width: 100%;
@@ -13,7 +16,8 @@
   justify-content: space-between;
   align-items: center;
 
-  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #fff2ee;
 }
 .header-overview-container {
   display: flex;
@@ -93,9 +97,11 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  padding-top: 2rem;
 }
 .graph-container {
-  height: 20rem;
+  height: fit-content;
 }
 .general-info-container {
   height: 100%;
@@ -104,6 +110,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  padding: 0 0 0 1rem;
 }
 .general-info-container * {
   margin-bottom: 1rem;
@@ -128,7 +135,8 @@
 
   margin-bottom: 2rem;
 }
-.insight-icon {
+.insight-icon,
+.graph-insight-icon {
   height: 2rem;
   width: 2rem;
   margin: 0 0.9rem 0 0;
@@ -149,4 +157,63 @@
   color: black;
   font-weight: bolder;
   font-size: 2.5rem;
+}
+
+.graph-container {
+  width: 80%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem 0 0;
+  border-right: 1px solid rgba(255, 242, 238, 1);
+}
+.graph-info-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.graph-numbers-container {
+  margin: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.graph-profit {
+  color: rgba(38, 39, 48, 1);
+  font-size: 3.5rem;
+  font-weight: bolder;
+  margin-bottom: 0.5rem;
+}
+.graph-general-insight-container {
+  width: fit-content;
+  margin: 0 0.5rem;
+  display: flex;
+  flex-direction: row;
+}
+.graph-general-insight-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: 0 1rem;
+}
+.graph-general-insight {
+  color: rgba(38, 39, 48, 1);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.graph-insight-container {
+  display: flex;
+  flex-direction: row;
+}
+.graph-insight-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.graph-insight {
+  font-size: 1.3rem;
+  font-weight: bolder;
+  color: rgba(47, 202, 114, 1);
+  position: relative;
 }

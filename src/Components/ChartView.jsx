@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import refreshIcon from '../assets/refresh.svg';
 import '../styles/ChartView.css';
 import chartRise from '../assets/chartRise.svg';
 import chartRiseWithAxes from '../assets/chartRiseWithAxes.svg';
+import Graph from './Graph';
 
 function ChartView() {
+  const [selectedRange, setSelectedRange] = useState('week');
+  const filterRangeSelection = useRef(null);
+  const handleRangeChange = () => {
+    setSelectedRange(() => filterRangeSelection.current.value);
+  };
   return (
     <div className="chart-view-container">
       <div className="chart-view-header-container">
@@ -28,6 +34,8 @@ function ChartView() {
               name="filter by date range"
               id="filter-range"
               className="filter-range-select"
+              onChange={handleRangeChange}
+              ref={filterRangeSelection}
             >
               <option value="week">This week</option>
               <option value="month">This month</option>
@@ -61,7 +69,7 @@ function ChartView() {
               </p>
             </div>
           </div>
-          <div className="graph-container">graph</div>
+          <Graph selectedRange={selectedRange} />
         </div>
         <div className="general-info-container">
           <h1 className="info-title">Total Profit</h1>
