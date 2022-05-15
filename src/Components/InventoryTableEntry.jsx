@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/interactive-supports-focus */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { useContext, useState } from 'react';
 import PropTypes from 'prop-types';
@@ -16,36 +17,37 @@ function InventoryTableEntry({ dataKey }) {
   const dummy = () => {};
   return (
     <>
-      <tr className="table-data-row">
-        <td className="table-data-cell">
+      <div className="table-data-row">
+        <div className="table-data-cell first-column">
           <input type="checkbox" />
-        </td>
-        <td className="table-data-cell">
+        </div>
+        <div className="table-data-cell product-column">
           <img alt="" src={dataObj?.imageData} className="product-image" />
           <p>{dataObj?.product}</p>
           <p>{dataObj?.region}</p>
-        </td>
-        <td className="table-data-cell">{dataObj?.avgRating}</td>
-        <td className="table-data-cell">{dataObj?.vintage}</td>
-        <td className="table-data-cell">{dataObj?.qty}</td>
-        <td className="table-data-cell">{dataObj?.volume}</td>
-        <td className="table-data-cell">{dataObj?.cost}</td>
-        <td className="table-data-cell">{dataObj?.price}</td>
-        <td
-          className="table-data-cell"
+        </div>
+        <div className="table-data-cell rating-column">
+          {dataObj?.avgRating}
+        </div>
+        <div className="table-data-cell vintage-column">{dataObj?.vintage}</div>
+        <div className="table-data-cell qty-column">{dataObj?.qty}</div>
+        <div className="table-data-cell vol-column">{dataObj?.volume}</div>
+        <div className="table-data-cell cost-column">{dataObj?.cost}</div>
+        <div className="table-data-cell price-column">{dataObj?.price}</div>
+        <div
+          role="button"
+          className="table-data-cell sort-column"
           onClick={handleExpand}
           onKeyDown={dummy}
         >
           <img src={dropDown} alt="" className={isExpanded ? 'expanded' : ''} />
-        </td>
-      </tr>
-      <tr>
-        {isExpanded && (
-          <td colSpan="9">
-            <InventoryTableEntryExpansion dataKey={dataKey} />
-          </td>
-        )}
-      </tr>
+        </div>
+      </div>
+      {isExpanded && (
+        <div colSpan="9">
+          <InventoryTableEntryExpansion dataKey={dataKey} />
+        </div>
+      )}
     </>
   );
 }
