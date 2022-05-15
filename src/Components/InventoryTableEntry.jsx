@@ -21,10 +21,12 @@ function InventoryTableEntry({ dataKey }) {
         <div className="table-data-cell first-column">
           <input type="checkbox" />
         </div>
-        <div className="table-data-cell product-column">
+        <div className="table-data-cell product-column product-col-container">
           <img alt="" src={dataObj?.imageData} className="product-image" />
-          <p>{dataObj?.product}</p>
-          <p>{dataObj?.region}</p>
+          <div className="product-cell-inner-info">
+            <p>{dataObj?.product}</p>
+            <p>{dataObj?.region}</p>
+          </div>
         </div>
         <div className="table-data-cell rating-column">
           {dataObj?.avgRating}

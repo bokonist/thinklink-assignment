@@ -7,10 +7,45 @@
   align-items: center;
 
   margin: 2rem 0;
+  font-weight: bolder;
 }
 .table-data-cell {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+.table-data-cell:not(.table-header-cell) {
+  color: gray;
+}
+.product-col-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.product-image {
+  margin: 0 3rem;
+}
+.product-cell-inner-info {
+  display: flex;
+  flex-direction: column;
+}
+.product-cell-inner-info :nth-child(2) {
+  color: gray;
+  font-weight: bold;
+}
+
+.product-cell-inner-info :nth-child(1) {
+  font-weight: bolder;
+  margin: 0.5rem 0;
+  color: black;
+}
+.table-data-cell.price-column {
+  color: black;
+}
+.table-data-cell.rating-column {
+  background-color: rgba(128, 128, 128, 0.288);
+  color: black;
+  font-size: 1.1rem;
+  height: 2rem;
 }

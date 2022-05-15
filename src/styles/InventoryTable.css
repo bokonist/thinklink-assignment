@@ -1,14 +1,12 @@
 .table-container {
   width: 95%;
   align-self: flex-start;
-  border: 1px solid red;
 }
 .main-table {
   width: 100%;
   height: fit-content;
   font-family: 'Open Sans', sans-serif;
   align-self: flex-start;
-  border: 1px solid blue;
 }
 .table-header {
   width: 100%;
@@ -21,13 +19,21 @@
 .table-header-cell {
   font-weight: bolder;
   height: 3rem;
-  background-color: aqua;
 
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
+.table-header-cell:hover:not(.product-column, .sort-column) {
+  cursor: pointer;
+  color: red;
+  transition: 500ms;
+}
+.table-header-cell > img {
+  margin: 0 0.5rem;
+}
+
 .first-column {
   width: 5%;
 }
