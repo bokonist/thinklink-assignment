@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import DataContext from '../Contexts/DataContext';
 import editEntry from '../assets/edit.svg';
 import deleteEntry from '../assets/deleteDustbin.svg';
+import '../styles/InventoryTableEntryExpansion.css';
 
 function InventoryTableEntryExpansion({ dataKey }) {
   const wineData = useContext(DataContext);

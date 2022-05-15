@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import DataContext from '../Contexts/DataContext';
 import dropDown from '../assets/dropdown.svg';
 import InventoryTableEntryExpansion from './InventoryTableEntryExpansion';
+import '../styles/InventoryTableEntry.css';
 
 function InventoryTableEntry({ dataKey }) {
   const wineData = useContext(DataContext);
