@@ -1,3 +1,4 @@
+/* eslint-disable import/no-dynamic-require */
 const wineData = [
   {
     id: 1,
@@ -9,18 +10,34 @@ const wineData = [
     cost: '$56.95',
     price: '$59.95',
     region: 'France',
-    rating: {
-      jamesSucklings: 'JS 95',
-      robertParker: 'RP 80',
-      wineSpectatorTesting: 'WS 79',
-      AntonioGallonis: '---',
-    },
-    stocks: { Possimus: 43, DowntownCondo: 95 },
-    img: '../assets/wines/staglin1.png',
+    ratings: [
+      {
+        name: "James Suckling's",
+        rating: 'JS 95',
+      },
+      {
+        name: 'Robert Parker',
+        rating: 'RP 80',
+      },
+      {
+        name: 'Wine Spectator Tasting',
+        rating: 'WS 79',
+      },
+      {
+        name: "Antonio Galloni's",
+        rating: '---',
+      },
+    ],
+    stocks: [
+      { name: 'Possimus', quantity: 43 },
+      { name: 'DowntownCondo', quantity: 95 },
+    ],
+    // eslint-disable-next-line global-require
+    imageData: require('../assets/wines/staglin1.png'),
   },
   {
     id: 2,
-    product: 'Bibi Graetz Testamatta Tos...',
+    product: 'Bibi Graetz Testamatta',
     avgRating: 'RP 95 +3',
     vintage: '2015',
     qty: '32',
@@ -28,18 +45,34 @@ const wineData = [
     cost: '$71.95',
     price: '$72.95',
     region: 'Chianti · Blends and Other',
-    rating: {
-      jamesSucklings: 'JS 95',
-      robertParker: 'RP 80',
-      wineSpectatorTesting: 'WS 79',
-      AntonioGallonis: '---',
-    },
-    stocks: { Possimus: 43, DowntownCondo: 95 },
-    img: '../assets/wines/bibi1.png',
+    ratings: [
+      {
+        name: "James Suckling's",
+        rating: 'JS 95',
+      },
+      {
+        name: 'Robert Parker',
+        rating: 'RP 80',
+      },
+      {
+        name: 'Wine Spectator Tasting',
+        rating: 'WS 79',
+      },
+      {
+        name: "Antonio Galloni's",
+        rating: '---',
+      },
+    ],
+    stocks: [
+      { name: 'Possimus', quantity: 43 },
+      { name: 'DowntownCondo', quantity: 95 },
+    ],
+    // eslint-disable-next-line global-require
+    imageData: require('../assets/wines/bibi1.png'),
   },
   {
     id: 3,
-    product: 'Cayuse Syrah en Chamber...',
+    product: 'Cayuse Syrah en Chamber',
     avgRating: 'RP 95 +3',
     vintage: '2012',
     qty: '12',
@@ -47,14 +80,30 @@ const wineData = [
     cost: '$139.95',
     price: '$150.95',
     region: 'United States · California · Blends',
-    rating: {
-      jamesSucklings: 'JS 95',
-      robertParker: 'RP 80',
-      wineSpectatorTesting: 'WS 79',
-      AntonioGallonis: '---',
-    },
-    stocks: { Possimus: 43, DowntownCondo: 95 },
-    img: '../assets/wines/cayuse1.png',
+    ratings: [
+      {
+        name: "James Suckling's",
+        rating: 'JS 95',
+      },
+      {
+        name: 'Robert Parker',
+        rating: 'RP 80',
+      },
+      {
+        name: 'Wine Spectator Tasting',
+        rating: 'WS 79',
+      },
+      {
+        name: "Antonio Galloni's",
+        rating: '---',
+      },
+    ],
+    stocks: [
+      { name: 'Possimus', quantity: 43 },
+      { name: 'DowntownCondo', quantity: 95 },
+    ],
+    // eslint-disable-next-line global-require
+    imageData: require('../assets/wines/cayuse1.png'),
   },
 ];
 export default wineData;
