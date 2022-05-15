@@ -71,6 +71,9 @@
 
   margin: 0 3rem 0 0.5rem;
 }
+.navbar-dropdown {
+  filter: invert(1);
+}
 .navbar-notification:hover,
 .navbar-dropdown:hover,
 .navbar-avatar,
