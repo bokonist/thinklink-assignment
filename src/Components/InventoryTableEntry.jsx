@@ -11,15 +11,19 @@ function InventoryTableEntry({ dataKey }) {
   const wineData = useContext(DataContext);
   const dataObj = wineData.filter((item) => item.id === dataKey)[0];
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
   const handleExpand = () => {
     setIsExpanded((prevState) => !prevState);
+  };
+  const handleCheck = () => {
+    setIsChecked((prevState) => !prevState);
   };
   const dummy = () => {};
   return (
     <>
       <div className="table-data-row">
         <div className="table-data-cell first-column">
-          <input type="checkbox" />
+          <input type="checkbox" checked={isChecked} onChange={handleCheck} />
         </div>
         <div className="table-data-cell product-column product-col-container">
           <img alt="" src={dataObj?.imageData} className="product-image" />
@@ -45,11 +49,7 @@ function InventoryTableEntry({ dataKey }) {
           <img src={dropDown} alt="" className={isExpanded ? 'expanded' : ''} />
         </div>
       </div>
-      {isExpanded && (
-        <div colSpan="9">
-          <InventoryTableEntryExpansion dataKey={dataKey} />
-        </div>
-      )}
+      {isExpanded && <InventoryTableEntryExpansion dataKey={dataKey} />}
     </>
   );
 }
