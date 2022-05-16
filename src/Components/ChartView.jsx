@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useCallback } from 'react';
 import refreshIcon from '../assets/refresh.svg';
 import '../styles/ChartView.css';
 import chartRise from '../assets/chartRise.svg';
@@ -8,9 +8,9 @@ import Graph from './Graph';
 function ChartView() {
   const [selectedRange, setSelectedRange] = useState('week');
   const filterRangeSelection = useRef(null);
-  const handleRangeChange = () => {
+  const handleRangeChange = useCallback(() => {
     setSelectedRange(() => filterRangeSelection.current.value);
-  };
+  }, []);
   return (
     <div className="chart-view-container">
       <div className="chart-view-header-container">

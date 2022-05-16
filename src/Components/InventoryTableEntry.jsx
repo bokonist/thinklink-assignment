@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import DataContext from '../Contexts/DataContext';
 import dropDown from '../assets/dropdown.svg';
@@ -12,13 +12,13 @@ function InventoryTableEntry({ dataKey }) {
   const dataObj = wineData.filter((item) => item.id === dataKey)[0];
   const [isExpanded, setIsExpanded] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
-  const handleExpand = () => {
+  const handleExpand = useCallback(() => {
     setIsExpanded((prevState) => !prevState);
-  };
-  const handleCheck = () => {
+  }, []);
+  const handleCheck = useCallback(() => {
     setIsChecked((prevState) => !prevState);
-  };
-  const dummy = () => {};
+  }, []);
+  const dummy = useCallback(() => {}, []);
   return (
     <>
       <div className="table-data-row">
