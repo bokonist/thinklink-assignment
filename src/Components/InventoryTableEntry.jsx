@@ -46,7 +46,11 @@ function InventoryTableEntry({ dataKey }) {
           onClick={handleExpand}
           onKeyDown={dummy}
         >
-          <img src={dropDown} alt="" className={isExpanded ? 'expanded' : ''} />
+          <img
+            src={dropDown}
+            alt=""
+            className={isExpanded ? 'expanded' : 'collapsed'}
+          />
         </div>
       </div>
       {isExpanded && <InventoryTableEntryExpansion dataKey={dataKey} />}
