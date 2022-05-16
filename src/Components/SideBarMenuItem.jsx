@@ -25,4 +25,4 @@ SideBarMenuItem.propTypes = {
   dataName: PropTypes.string.isRequired,
   dataIcon: PropTypes.string.isRequired,
 };
-export default SideBarMenuItem;
+export default React.memo(SideBarMenuItem);

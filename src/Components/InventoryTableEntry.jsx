@@ -56,4 +56,4 @@ function InventoryTableEntry({ dataKey }) {
 InventoryTableEntry.propTypes = {
   dataKey: PropTypes.number.isRequired,
 };
-export default InventoryTableEntry;
+export default React.memo(InventoryTableEntry);

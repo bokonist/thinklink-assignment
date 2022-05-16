@@ -57,4 +57,4 @@ function Graph({ selectedRange }) {
 Graph.propTypes = {
   selectedRange: PropTypes.string.isRequired,
 };
-export default Graph;
+export default React.memo(Graph);

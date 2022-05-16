@@ -17,4 +17,4 @@ MetricCard.propTypes = {
   dataValue: PropTypes.number.isRequired,
   dataIcon: PropTypes.string.isRequired,
 };
-export default MetricCard;
+export default React.memo(MetricCard);

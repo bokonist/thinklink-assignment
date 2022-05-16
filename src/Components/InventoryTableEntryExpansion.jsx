@@ -60,4 +60,4 @@ function InventoryTableEntryExpansion({ dataKey }) {
 InventoryTableEntryExpansion.propTypes = {
   dataKey: PropTypes.number.isRequired,
 };
-export default InventoryTableEntryExpansion;
+export default React.memo(InventoryTableEntryExpansion);
