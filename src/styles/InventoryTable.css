@@ -21,6 +21,7 @@
 }
 .table-header-cell {
   font-weight: bolder;
+  color: rgba(72, 85, 114, 1);
   height: 3rem;
 
   display: flex;
