@@ -1,0 +1,22 @@
+.expansion-container {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+}
+.expansion-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.expansion-header-info {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.additional-info-container {
+  display: flex;
+}
+.expansion-header-toolkit {
+  width: 20%;
+}
