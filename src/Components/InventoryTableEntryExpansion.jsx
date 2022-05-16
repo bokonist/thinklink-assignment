@@ -28,26 +28,31 @@ function InventoryTableEntryExpansion({ dataKey }) {
           <img src={deleteEntry} alt="" className="delete-wine" />
         </div>
       </div>
-      <div className="expansion-body"> </div>
-      <div className="rating-expanded">
-        <h1 className="rating-title">RATING</h1>
-        {dataObj?.ratings.map((ratingInfo, index) => (
-          // eslint-disable-next-line react/no-array-index-key
-          <React.Fragment key={index}>
-            <h1 className="rating-author">{ratingInfo.name}</h1>
-            <p className="rating-value">{ratingInfo.rating}</p>
-          </React.Fragment>
-        ))}
-      </div>
-      <div className="stock-expanded">
-        <h1 className="stock-title">STOCK</h1>
-        {dataObj?.stocks.map((stockInfo, index) => (
-          // eslint-disable-next-line react/no-array-index-key
-          <React.Fragment key={index}>
-            <h1 className="stock-supplier">{stockInfo.name}</h1>
-            <p className="stock-quantity">{stockInfo.quantity}</p>
-          </React.Fragment>
-        ))}
+      <div className="expansion-body">
+        <div className="rating-expanded">
+          <h1 className="rating-title">RATING</h1>
+          <div className="ratings-container">
+            {dataObj?.ratings.map((ratingInfo, index) => (
+              // eslint-disable-next-line react/no-array-index-key
+              <div key={index} className="ratings-inner-container">
+                <h1 className="rating-author">{ratingInfo.name}</h1>
+                <p className="rating-value">{ratingInfo.rating}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="stock-expanded">
+          <h1 className="stock-title">STOCK</h1>
+          <div className="stock-container">
+            {dataObj?.stocks.map((stockInfo, index) => (
+              // eslint-disable-next-line react/no-array-index-key
+              <div className="stock-inner-container" key={index}>
+                <h1 className="stock-supplier">{stockInfo.name}</h1>
+                <p className="stock-quantity">{stockInfo.quantity}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

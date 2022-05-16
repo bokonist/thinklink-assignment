@@ -1,22 +1,144 @@
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .expansion-container {
   width: 95%;
   display: flex;
   flex-direction: column;
+  animation: appear 400ms ease-in 0s 1 normal forwards;
+  padding: 0 0 0 7rem;
+  border: 1px solid rgba(128, 128, 128, 0.281);
+  border-width: 1px 1px 1px 1px;
 }
 .expansion-header {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.247);
 }
 .expansion-header-info {
   width: 40%;
   display: flex;
   flex-direction: column;
 }
+.wine-title {
+  font-size: 1.1rem;
+  font-weight: bolder;
+  margin: 1rem 0;
+}
 .additional-info-container {
   display: flex;
 }
+.info-key {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0rem 1rem 0 0;
+}
+.info-value {
+  color: rgba(140, 140, 161, 1);
+  font-weight: bold;
+  margin-right: 1rem;
+}
 .expansion-header-toolkit {
   width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
+.toolkit-view {
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  color: rgba(129, 20, 52, 1);
+  font-weight: bold;
+}
+.edit-wine {
+  height: 1.2rem;
+  width: 1.2rem;
+}
+.delete-wine {
+  height: 1.2rem;
+  width: 1.2rem;
+}
+
+.expansion-body {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+.rating-expanded,
+.stock-expanded {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.rating-title,
+.stock-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgba(140, 140, 161, 1);
+  margin-left: 1rem;
+}
+.ratings-container,
+.stock-container {
+  height: fit-content;
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+}
+.ratings-inner-container,
+.stock-inner-container {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  flex-direction: column;
+  margin: 0.5rem 1rem;
+}
+.rating-author,
+.stock-supplier {
+  color: rgba(38, 39, 48, 1);
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+}
+.rating-value,
+.stock-quantity {
+  background-color: rgba(244, 247, 255, 1);
+  border-radius: 4px;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+}
+.stock-quantity {
+  color: rgba(129, 20, 52, 1);
+  font-weight: bolder;
+  background-color: rgba(255, 242, 238, 1);
+}
+/*
+.stock-expanded {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.stock-container {
+  display: flex;
+  flex-direction: row;
+}
+.stock-inner-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2rem;
+}
+.stock-supplier {
+}
+.stock-quantity {
+}
+*/
